@@ -1,0 +1,51 @@
+{%extends 'Site/base.html'%}
+{% load static %}
+
+{% block content %}
+        <div class="main-img">
+                <img src="{% static 'homepage.png' %}" width="50%">     
+        </div>
+        <div class="content">
+                <h4>Who Are We?</h4><hr style="width:40%">
+                <p><em>Know Your Body, Own Your Choice.</em></p> 
+                <p>As an international organization found in 2025, we are devoted to the educational empowerment for more children via activities such as non-profit education consultation and the sex education publicizing, as well as constructing support systems for women growth through creative means like teenager writing competitions, non-profit publications, and interdisciplinary forums.</p>
+                <a href="/site/about/">>>>Learn More</a><hr style="width:0%">
+
+                <h4>What Do We Do Exactly?</h4><hr style="width:80%">
+                <ol>
+                        <li>Non-profit Educational Aid</li><br><p style="padding-right:10px;">本计划为教育资源，经济有困难的青少年及成年学习者联络，提供公益服务，咨询：</p><br>
+                                <ul>
+                                        <li>寻找，联络具有特别政策的组织，院校，联动社会人士/高校学生优化，辅助受帮助学生申请材料，奖学金/助学金，提升成绩，寻找资助人。</li>
+                                        <li>联动，合作其他机构，组织，为需要帮助的学生提供多方位辅助。</li>
+                                </ul>
+                        <li>Sex Education Popularization</li>
+                        <li>Influence Through Art</li>  
+
+                </ol>
+        </div>
+            <div class="footer">
+        <div class="info-item">
+            <div class="info-icon">📍</div>
+            <strong>Address</strong>
+            <p>No. 88 Kun-Cheng-Hu-Xi Road Changshu, Suzhou, Jiangsu Province, China</p >
+        </div>
+        
+        <div class="info-item">
+            <div class="info-icon">📞</div>
+            <strong>Phone</strong>
+            <p>+86 18118435242</p >
+        </div>
+        
+        <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <strong>Email</strong>
+            <p>hannah.061203@qq.com</p >
+        </div>
+
+        <div class="info-item">
+            <div class="info-icon">🌍</div>
+            <strong>Languages</strong>
+            <p><a href="/site/home/eng=off" style="text-decoration:none">🇨🇳</a> <a href="/site/home/eng=on" style="text-decoration:none">🇺🇸</a></p>
+        </div>
+    </div>
+{% endblock %}
