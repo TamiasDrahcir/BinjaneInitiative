@@ -1,0 +1,19 @@
+{%extends 'Site/base.html'%}
+{% load static %}
+
+{% block content %}
+     <div class="main-img">
+                <img src="{% static 'service-alt.jpg' %}" width="100%">     
+        </div>
+        <div class="content" style="transform: translateY(-100px);">
+            <h1>Service</h1><hr style="width:40%">
+                <p>This is the English Page for Service</p>
+        </div>
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/service/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/service/eng=on" style="color:white; text-decoration:none">English</a></h5>
+        </div>
+{% endblock %}

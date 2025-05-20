@@ -2,36 +2,18 @@
 {% load static %}
 
 {% block content %}
-    <body>
-        <h1 class="heading">Our Services</h1>
-        <img class="main-img" src="{% static 'home-1.png' %}" style="position:absolute; top:7.5%">
-        <p class="content" style="top:65%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat duis ultricies.</p>
-        <p class="content" style="top:75%">Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultricies mi eget mauris pharetra et ultrices neque ornare aenean.</p>
-        <p class="content" style="top:85%; padding-bottom:20%">Sed nisi lacus sed viverra tellus in hac habitasse platea. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Elit at imperdiet dui accumsan sit amet nulla facilisi morbi. In mollis nunc sed id semper risus in hendrerit gravida. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-    </body>
-        <div class="footer">
-        <div class="info-item">
-            <div class="info-icon">📍</div>
-            <strong>Address</strong>
-            <p>No. 88 Kun-Cheng-Hu-Xi Road Changshu, Suzhou, Jiangsu Province, China</p >
+     <div class="main-img">
+                <img src="{% static 'service-alt.jpg' %}" width="100%">     
         </div>
-        
-        <div class="info-item">
-            <div class="info-icon">📞</div>
-            <strong>Phone</strong>
-            <p>+86 18118435242</p >
+        <div class="content" style="transform: translateY(-100px);">
+            <h1>服务</h1><hr style="width:40%">
+                <p>更多精彩敬请期待</p>
         </div>
-        
-        <div class="info-item">
-            <div class="info-icon">✉️</div>
-            <strong>Email</strong>
-            <p>hannah.061203@qq.com</p >
-        </div>
+{% endblock %}
 
+{% block lang %}
         <div class="info-item">
-            <div class="info-icon">🌍</div>
-            <strong>Languages</strong>
-            <p><a href="/site/home/eng=off" style="text-decoration:none">🇨🇳</a> <a href="/site/home/eng=on" style="text-decoration:none">🇺🇸</a></p>
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/service/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/service/eng=on" style="color:white; text-decoration:none">English</a></h5>
         </div>
-    </div>
 {% endblock %}

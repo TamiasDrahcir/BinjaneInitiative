@@ -1,62 +1,49 @@
 {%extends 'Site/base.html'%}
+{% load static %}
 
 {% block content %}
-<body>
-    <h1 class="heading">Contact Us</h1>
-    <p class="content" style="top:27.5%">We'd love to hear from you! Please fill out the form below.</p>      
-    <form class="content" style="top:25%" action="/submit-contact/" method="post">
-        <div class="form-group">
-            <label class="label" for="name">Your Name   </label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        
-        <div class="form-group">
-            <label class="label" for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-            <label class="label" for="phone">Phone Number (Optional)</label>
-            <input type="tel" id="phone" name="phone">
-        </div>
-        
-        <div class="form-group">
-            <label class="label" for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-        </div>
-        
-        <div class="form-group">
-            <label class="label" for="message">Your Message</label> <br>
-            <textarea id="message" name="message" required></textarea>
-        </div>
-        
-        <button type="submit" class="submit-btn" style="margin-bottom:40%">Send Message</button>
-    </form>
+     <div class="main-img">
+                <img src="{% static 'contact.jpg' %}" width="500px">     
     </div>
-</body>
-    <div class="footer">
-        <div class="info-item">
-            <div class="info-icon">📍</div>
-            <strong>Address</strong>
-            <p>No. 88 Kun-Cheng-Hu-Xi Road Changshu, Suzhou, Jiangsu Province, China</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">📞</div>
-            <strong>Phone</strong>
-            <p>+86 18118435242</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">✉️</div>
-            <strong>Email</strong>
-            <p>hannah.061203@qq.com</p >
-        </div>
+        <div class="content" style="background-color: #d6ecf0;">
+            <h1 style="position: absolute; top:-50px; background-color: #d6ecf0; padding-left:60px; padding-top:30px; transform: translateX(-60px) translateY(0px);">联系我们</h1><hr style="width:40%;">
+                <p style="position: absolute">我们很乐意听取你的意见！请填入以下表格：</p>
+            </div>
 
-        <div class="info-item">
-            <div class="info-icon">🌍</div>
-            <strong>Languages</strong>
-            <p><a href="/site/home/eng=off">🇨🇳</a> <a href="/site/home/eng=on">🇺🇸</a></p>
-        </div>
+            <form class="content" action="/submit-contact/" method="post" style="position:absolute; top:960px;">
+                <div class="form-group">
+                    <label class="label" for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="email">邮件</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="phone">电话号码（可选）</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="subject">标题</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="message">信息</label> <br>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" style="margin-bottom:40%; width:200px;font-size:25px">发送</button>
+        </form>
     </div>
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/contact/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/contact/eng=on" style="color:white; text-decoration:none">English</a></h5>
+        </div>
 {% endblock %}

@@ -1,0 +1,40 @@
+{%extends 'Site/base.html'%}
+{% load static %}
+
+{% block content %}
+     <div class="main-img">
+                <img src="{% static 'about.jpg' %}" width="100%">     
+        </div>
+        <div class="content" style="transform: translateY(-100px);">
+            <h1>团队介绍</h1><hr style="width:40%">
+            <div class="team">
+                <div>
+                    <p3>戴可欣</p3><br><br>
+                    <img src="{% static 'user.jpg' %}" style="float:left; width:250px; height:auto">
+                    <p>请输入简历</p>
+                </div>
+                <div>
+                    <p3>梧桐</p3><br><br>
+                    <img src="{% static 'user.jpg' %}" style="float:left; width:250px; height:auto">
+                    <p>请输入简历</p>
+                </div>
+                <div>
+                    <p3>姚天祐</p3><br><br>
+                    <img src="{% static 'user.jpg' %}" style="float:left; width:250px; height:auto">
+                    <p>请输入简历</p>
+                </div>
+                <div>
+                    <p3>匿名</p3><br><br>
+                    <img src="{% static 'user.jpg' %}" style="float:left; width:250px; height:auto">
+                    <p>请输入简历</p>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/team/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/team/eng=on" style="color:white; text-decoration:none">English</a></h5>
+        </div>
+{% endblock %}
