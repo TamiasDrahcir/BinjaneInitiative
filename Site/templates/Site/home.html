@@ -2,50 +2,111 @@
 {% load static %}
 
 {% block content %}
-        <div class="main-img">
-                <img src="{% static 'homepage.png' %}" width="50%">     
-        </div>
-        <div class="content">
-                <h3>我们是谁</h3><hr style="width:40%">
-                <p><em>Know Your Body, Own Your Choice.</em></p> 
-                <p>创立于2025年的国际教育俱乐部。致力于通过公益教育咨询与性教育普及等活动，为更多孩子提供教育赋权。通过青年写作大赛、公益出版、跨界论坛等创新形式，搭建女性成长支持系统。</p>
-                <a href="/site/about/" style="text-decoration:none">>>>了解更多</a><hr style="width:0%">
 
-                <h3>我们具体做什么</h3><hr style="width:80%">
-                <ol>
-                        <li>公益助学</li><br><p style="padding-right:10px;">本计划为教育资源，经济有困难的青少年及成年学习者联络，提供公益服务，咨询：</p><br>
-                                <ul>
-                                        <li>寻找，联络具有特别政策的组织，院校，联动社会人士/高校学生优化，辅助受帮助学生申请材料，奖学金/助学金，提升成绩，寻找资助人。</li>
-                                        <li>联动，合作其他机构，组织，为需要帮助的学生提供多方位辅助。</li>
-                                </ul>
-                        <li>性教育科普</li>
-                        <li>艺术影响力</li>  
+
+        <div class="topbar" style="height: 100vh;">
+                <a href="/site/home/eng=off" style="z-index:9999999 !important">
+                        <img src="{% static 'icon.jpg' %}" height="80vh" style="height:20%; z-index: 9999999 !important; animation-name:fadeIn; animation-duration:1s; animation-fill-mode:backwards; animation-delay:2s">
+                </a>
+        </div>
+        <div class="main-img-homepage" style="min-height:100vh;position:absolute; top:0; opacity:.5; transform: translateY(-50px)">
+                <a href="/site/home/eng=off"><img src="{% static 'homepage.jpg' %}" style="height:100vh"></a>
+        </div>
+        <div class="leftbox">
+                <h2 style="animation-delay:1.25s; transform:translateX(15vw)">教育</h2>
+                <h2 style="animation-delay:1.5s; transform:translateX(5vw)">赋权</h2>
+                <h2 style="animation-delay:1.75s; transform:translateX(-5vw)">觉知</h2>
+                <h2 style="animation-delay:2s; transform:translateX(5vw)">志愿</h2>
+                <h2 style="animation-delay:2.25s; transform:translateX(15vw)">创新</h2>
+        </div>
+        <div class="leftbox" style="transform: scaleX(-1); text-align: right;">
+                <h2 style="animation-delay:1.25s; text-align:right; transform:translateX(15vw) translateX(90%) scaleX(-1)">包容</h2>
+                <h2 style="animation-delay:1.5s; text-align:right; transform:translateX(5vw) translateX(90%) scaleX(-1)">领导</h2>
+                <h2 style="animation-delay:1.75s; text-align:right; transform:translateX(-5vw) translateX(90%) scaleX(-1)">应援</h2>
+                <h2 style="animation-delay:2s; text-align:right; transform:translateX(5vw) translateX(90%) scaleX(-1)">社区</h2>
+                <h2 style="animation-delay:2.25s; text-align:right; transform:translateX(15vw) translateX(90%) scaleX(-1)">合作</h2>
+        </div>
+        <div class="content" id='homepage' style="transform:translateY(100vh); width:100vw; mask-image: linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,1) 2.5%);">
+                <br><br><br><br><br><h1>我们是谁</h1><hr style="width:23%">
+                <h4 style="line-height: 200%;"><em>Know Your Body, Own Your Choice.</em></h4> 
+                <h4 style="line-height: 200%;">创立于2025年的国际教育俱乐部。致力于通过公益教育咨询与性教育普及等活动，为更多孩子提供教育赋权。通过青年写作大赛、公益出版、跨界论坛等创新形式，搭建女性成长支持系统。</h4><br>
+                <h6 style="line-height: 200%;"><em>秉蕑是由一群拥有行动力，理想主义，社会影响力的人们聚集在一起，希望能够让性教育得到更好的普及，通过教育让更多需要的人得到身心的赋权的社区。</em></h3><br>
+                <a href="/site/about/eng=off" style="text-decoration:none"><h4>>>>了解更多</h4></a><hr style="width:0%">
+                <div class="question">
+                        <br><h4 class="questiontext" style="position:relative; left:6vh"><em>那么，我们具体做什么呢？</em></h4>
+                </div>
+                <div class="preview" id="human_kaleidoscope">
+                        <h2 class="title"><strong>人间万花筒</strong></h2><br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id dignissim ex, eu bibendum mauris. Sed laoreet purus eget nunc tempor, ac dignissim leo vehicula. Etiam tristique pellentesque tempus. Proin rutrum ornare tortor, a hendrerit mauris maximus accumsan. Fusce sagittis ut libero in elementum. Fusce sed malesuada elit. In elementum nisi eleifend, pellentesque nulla ac, consectetur orci. Maecenas rhoncus ut tortor a malesuada. Phasellus eget ipsum mattis, commodo neque at, dapibus diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br><br> <a href="/site/kaleidoscope/eng=off">>>>了解更多</a></p>
+                        <div class="gallery">
+                                <div class="gallery-item">
+                                        <a href="https://mp.weixin.qq.com/s/oSWi22zuPPB2a6oXJGx3xQ" target="_blank">
+                                                <img src="{% static 'HK01.jpg' %}">
+                                                <h6>撞南墙的体验派人生：<br>一个西北女孩的<br>"非典型"成长</h6>
+                                        </a>
+                                </div>
+                                <div class="gallery-item">
+                                        <a href="https://mp.weixin.qq.com/s/sbB0XZvBu-QELfod5RrO0g" target="_blank">
+                                                <img src="{% static 'HK02.jpg' %}">
+                                                <h6>自从学会了“无所事事”，<br>我的创作反而开挂了</h6>
+                                        </a>
+                                 </div>
+                        </div>
+                </div>
+                <div class="preview" id="she_thinks">
+                        <h2 class="title"><strong>她见思辨</strong></h2><br>
+                        <p>Quisque ac libero viverra, suscipit nisi in, fermentum purus. Suspendisse auctor viverra imperdiet. Sed at interdum mauris. Aenean sit amet elit lorem. Nullam consectetur accumsan libero sed aliquam. Ut ac sem id nibh sodales egestas. Quisque vel ex laoreet, pretium arcu vitae, tristique est. Maecenas tempus odio sollicitudin, volutpat orci vel, facilisis ex.  <br><br> <a href="/site/tajian/eng=off">>>>了解更多</a></p>
+                        <div class="gallery">
+                                <div class="gallery-item">
+                                        <a href="https://mp.weixin.qq.com/s/DvEBGJem6wRdLEBJIuR0pw" target="_blank">
+                                                <img src="{% static 'ST01.jpg' %}">
+                                                <h6>“你太强势了”<br>职场女性的生存困境</h6>
+                                        </a>
+                                </div>
+                                <div class="gallery-item">
+                                        <a href="https://mp.weixin.qq.com/s/ZsrlUw-gza9kj5_DlyUdbw" target="_blank">
+                                                <img src="{% static 'ST02.jpg' %}">
+                                                <h6>女性的30岁<br>不是保质期终点</h6>
+                                        </a>
+                                 </div>
+                        </div>
+                </div>
+                <div class="preview" id="volunteer">
+                        <h2 class="title"><strong>志愿者</strong></h2><br>
+                        <p>Integer lobortis vitae est et fringilla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam pulvinar neque vel elit lacinia, nec consectetur eros feugiat. Praesent ac finibus est. Integer lacus lectus, faucibus in libero ac, viverra dignissim sapien. Nunc nec elit imperdiet, faucibus nulla quis, blandit sapien. Cras luctus dictum augue, et vestibulum lacus bibendum eu. Suspendisse tincidunt, tortor in dictum pellentesque, ante ipsum fringilla velit, vitae fermentum arcu ex ac diam. Vivamus porta cursus turpis, sed maximus tellus posuere non. Suspendisse eros velit, vehicula non aliquam vitae, ullamcorper vitae dolor. Mauris suscipit arcu eget nunc dictum posuere. Donec bibendum, quam eu efficitur suscipit, ligula mauris laoreet dui, quis posuere elit eros ut erat. Sed sed suscipit augue. Pellentesque bibendum vehicula nunc, non pretium magna ornare quis. Maecenas quis molestie sem. Etiam scelerisque, massa non blandit euismod, magna dolor gravida ipsum, quis egestas enim neque sed lacus.</p>
+                        <div class="gallery">
+                                <div class="gallery-item">
+                                        <a href="/site/service/eng=off" target="_blank">
+                                                <img src="{% static 'VL01.jpg' %}">
+                                                <h6>更多内容请前往我们的“服务”页面</h6>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+                
+                <h1 style="transform:translateX(-60px)">招新</h1><hr style="width:12%; transform: translateX(-30px);">
+                        <h4 style="transform:translateX(-30px)">目前，我们正开展【秉蕑2025-2026年团队招募】</h4><br>
+
+                        <strong><h4 style="transform:translateX(-30px)">为什么加入我们？</h4></strong><br>
+                        <ul style="transform:translateX(-30px)">
+                                        <li>加入此意义非凡的行动，成为青年领袖，收获一份与众不同的人生经历。</li>
+                                        <li>锻炼与提升自己的策划，管理，沟通能力。</li>
+                                        <li>结交人士来自世界各地的行业精英和不同背景的同学，建立社交网络。</li><br>
+                        </ul>
+</h4>
+
+                        
+                        
+                <a href="https://mp.weixin.qq.com/s?__biz=Mzk3NTgxNjUwNw==&mid=2247483746&idx=1&sn=50cdf5694bb8a003919163f78c7f98fd&scene=21#wechat_redirect" target="_blank"><h4>>>>点击查看详情</h4></a><hr style="width:0%">
+                <a href="/site/team/eng=off"><h4>>>>点击了解我们的团队</h4></a><hr style="width:0%">
 
                 </ol>
         </div>
-            <div class="footer">
-        <div class="info-item">
-            <div class="info-icon">📍</div>
-            <strong>Address</strong>
-            <p>中国江苏省常熟市昆承湖西路88号</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">📞</div>
-            <strong>Phone</strong>
-            <p>+86 18118435242</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">✉️</div>
-            <strong>Email</strong>
-            <p>hannah.061203@qq.com</p >
-        </div>
+{% endblock %}
 
+{% block lang %}
         <div class="info-item">
-            <div class="info-icon">🌍</div>
-            <strong>语言</strong>
-            <p><a href="/site/home/eng=off" style="text-decoration:none">🇨🇳</a> <a href="/site/home/eng=on" style="text-decoration:none">🇺🇸</a></p>
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/home/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/home/eng=on" style="color:white; text-decoration:none">English</a></h5>
         </div>
-    </div>
 {% endblock %}

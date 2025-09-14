@@ -3,37 +3,20 @@
 
 {% block content %}
      <div class="main-img">
-                <img src="{% static 'homepage.png' %}" width="50%">     
+                <img src="{% static 'about.jpg' %}" width="100%">     
         </div>
         <div class="content">
-                <p>《诗经·郑风·溱洧》：「士与女，方<strong>秉蕑</strong>兮。 」</p>
-                <p><strong>“蕑”</strong>（jian一声） 为中国传统文化中的兰草，其寓意落于在复杂的环境中秉持自己的价值观。而“秉”便是取自秉持，寓意抓住真理的坚韧精神。</p>
-                <p>秉蕑是由一群拥有行动力，理想主义，社会影响力的人们聚集在一起，希望能够让性教育得到更好的普及，通过教育让更多需要的人得到身心的赋权的社区。</p> 
+            <h1>关于我们</h1><hr style="width:40%">
+                <br><p>《诗经·郑风·溱洧》：「士与女，方<strong>秉蕑</strong>兮。 」</p>
+                <br><p><strong>“蕑”</strong>（jian一声） 为中国传统文化中的兰草，其寓意落于在复杂的环境中秉持自己的价值观。而“秉”便是取自秉持，寓意抓住真理的坚韧精神。</p>
+                <br><p>秉蕑是由一群拥有行动力，理想主义，社会影响力的人们聚集在一起，希望能够让性教育得到更好的普及，通过教育让更多需要的人得到身心的赋权的社区。</p> 
+                <br><p>无论您选择支持、参与，还是与我们并肩同行，秉蕑定会回以地坚韧不拔的行动。我们将同心协力，见证改变之力——从一名学子到一间课堂，从一片乡土到万千星光。</p>
         </div>
-        <div class="footer">
-        <div class="info-item">
-            <div class="info-icon">📍</div>
-            <strong>Address</strong>
-            <p>No. 88 Kun-Cheng-Hu-Xi Road Changshu, Suzhou, Jiangsu Province, China</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">📞</div>
-            <strong>Phone</strong>
-            <p>+86 18118435242</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">✉️</div>
-            <strong>Email</strong>
-            <p>hannah.061203@qq.com</p >
-        </div>
+{% endblock %}
 
+{% block lang %}
         <div class="info-item">
-            <div class="info-icon">🌍</div>
-            <strong>Languages</strong>
-            <p><a href="/site/home/eng=off">🇨🇳</a> <a href="/site/home/eng=on">🇺🇸</a></p>
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/about/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/about/eng=on" style="color:white; text-decoration:none">English</a></h5>
         </div>
-    </div>
-        
 {% endblock %}

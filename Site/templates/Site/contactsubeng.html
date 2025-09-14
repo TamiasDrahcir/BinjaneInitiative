@@ -1,0 +1,31 @@
+{%extends 'Site/baseeng.html'%}
+{% load static %}
+
+{% block content %}
+     <div class="main-img">
+                <img src="{% static 'contact.jpg' %}" width="500px">     
+        </div>
+        <div class="content">
+            <h1 style="position: absolute; top:-50px; transform:translateY(90px) translateX(-30px);">Contact Us</h1><hr style="width:40%; transform:translateY(60px)">
+        </div>
+
+        <div style="position:absolute; top:960px; transform:translateY(60px)">
+            <p>Thank you for reaching out to us! We have received your message and will get back to you as soon as possible.</p>
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            {% if success %}
+                <p style="color: green;">Email sent successfully!</p>
+            {% endif %}
+            <a href="/site/contact/eng=on">
+                <button type="button" class="submit-btn" style="margin-bottom:40%; width:200px;font-size:25px">Submit Another</button>
+            </a>
+        </div>
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/contact/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/contact/eng=off" style="color:white; text-decoration:none">English</a></h5>
+        </div>
+{% endblock %}

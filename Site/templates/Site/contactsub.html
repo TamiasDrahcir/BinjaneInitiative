@@ -1,0 +1,33 @@
+{%extends 'Site/base.html'%}
+{% load static %}
+
+{% block content %}
+     <div class="main-img">
+                <img src="{% static 'contact.jpg' %}" width="500px">     
+    </div>
+        <div class="content" style="background-color: #d6ecf0;">
+            <h1 style="position: absolute; top:-50px; background-color: #d6ecf0; padding-left:60px; padding-top:30px; transform: translateX(-60px) translateY(0px);">联系我们</h1><hr style="width:40%;">
+                <p style="position: absolute">我们很乐意听取你的意见！请填入以下表格：</p>
+            </div>
+
+            <div style="position:absolute; top:960px; transform:translateY(60px)">
+            <p>感谢您与我们联系！我们已收到您的消息，并将尽快回复您。</p>
+            {% if error %}
+                <p style="color: red;">错误：{{ error }}</p>
+            {% endif %}
+            {% if success %}
+                <p style="color: green;">邮件发送成功！</p>
+            {% endif %}
+            <a href="/site/contact/eng=on">
+                <button type="button" class="submit-btn" style="margin-bottom:40%; width:200px;font-size:25px">Submit Another</button>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/contact/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/contact/eng=on" style="color:white; text-decoration:none">English</a></h5>
+        </div>
+{% endblock %}

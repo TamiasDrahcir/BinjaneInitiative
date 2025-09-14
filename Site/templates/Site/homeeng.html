@@ -1,51 +1,64 @@
-{%extends 'Site/base.html'%}
+{%extends 'Site/baseeng.html'%}
 {% load static %}
 
 {% block content %}
         <div class="main-img">
-                <img src="{% static 'homepage.png' %}" width="50%">     
+                <img src="{% static 'homepage.jpg' %}" style="width:100%; height:100%;">     
         </div>
         <div class="content">
-                <h4>Who Are We?</h4><hr style="width:40%">
-                <p><em>Know Your Body, Own Your Choice.</em></p> 
-                <p>As an international organization found in 2025, we are devoted to the educational empowerment for more children via activities such as non-profit education consultation and the sex education publicizing, as well as constructing support systems for women growth through creative means like teenager writing competitions, non-profit publications, and interdisciplinary forums.</p>
-                <a href="/site/about/">>>>Learn More</a><hr style="width:0%">
+                <h1>Who Are We?</h1><hr style="width:40%">
+                <h4 style="line-height: 200%;"><em>Know Your Body, Own Your Choice.</em></h4> <br>
+                <h4 style="line-height: 200%;">Established in 2025, we are an international education collective committed to empowering children through educational equity initiatives and comprehensive sex education programs. We foster female development through innovative platforms including youth writing competitions, charitable publishing projects, and cross-sectoral symposiums, creating holistic support systems for women's growth.</h4><br>
+                <a href="/site/about/eng=off" style="text-decoration:none"><h4>>>>Learn More</h4></a><hr style="width:0%">
 
-                <h4>What Do We Do Exactly?</h4><hr style="width:80%">
-                <ol>
-                        <li>Non-profit Educational Aid</li><br><p style="padding-right:10px;">本计划为教育资源，经济有困难的青少年及成年学习者联络，提供公益服务，咨询：</p><br>
+                <br><h1>What Do We Do Exactly?</h1><hr style="width:80%">
+                <ol style="font-size: 25px;">
+                        <li><strong>Educational Equity Program</strong></li><br><h4 style="padding-right:10px;">We connect economically challenged youth and adult learners with critical educational resources through:</h4><br>
                                 <ul>
-                                        <li>寻找，联络具有特别政策的组织，院校，联动社会人士/高校学生优化，辅助受帮助学生申请材料，奖学金/助学金，提升成绩，寻找资助人。</li>
-                                        <li>联动，合作其他机构，组织，为需要帮助的学生提供多方位辅助。</li>
+                                        <li>Strategic partnerships with institutions offering special admission policies and financial aid; Tailored guidance for scholarship/grants applications and academic enhancement</li>
+                                        <li>Cross-sector alliances with other organizations to provide multidimensional support for students in need</li><br>
                                 </ul>
-                        <li>Sex Education Popularization</li>
-                        <li>Influence Through Art</li>  
+                        <li><strong>Sexual Health Education Initiatives</strong></li><br>
+                                <ul>
+                                        <li>Educational Outreach</li>
+                                        <ul>
+                                        <li>Age-appropriate sexual education curricula for organizations, schools, and families</li>
+                                        <li>Digital outreach through dedicated social media platforms</li>
+                                        <li>Collaborative partnerships to expand program reach and provide diverse sex education programs</li>
+                                        </ul><br>
+                                        <li>Innovative Solutions</li>
+                                        <ul>
+                                        <li>Development of interactive sexual education apps/digital tools to influence a wider range of people</li>
+                                        <li>Publication of empowerment resources including <strong>women's legal rights handbooks</strong> and <strong>anthologies of female growth narratives</strong></li>
+                                        </ul><br>
+                                </ul>
+                        <li><strong>Creative Advocacy Through Arts</strong></li> <br>
+                                <ul>
+                                        <li>Gender equality writing competitions and storytelling platforms</li>
+                                        <li>Documentary projects archiving women's lived experiences</li>
+                                        <li>Curated art exhibitions spotlighting female artists</li>
+                                        <li>Thought leadership content on gender equity issues</li>
+                                </ul><br>
+                
+                <h1 style="transform:translateX(-60px)">Recruitment</h1><hr style="width:12%; transform: translateX(-30px);">
+                        <h4 style="transform:translateX(-30px)">Currently, we're recruiting for Binjane's 2025-2026 Team</h4><br>
 
+                        <strong><h4 style="transform:translateX(-30px)">Why Us?</h4></strong><br>
+                        <ul style="transform:translateX(-30px)">
+                                        <li>Joining this extraordinary initiative, becoming a young leader, and gaining a unique life experience.</li>
+                                        <li>Improve your project management, leadership, and communication skills.</li>
+                                        <li>Get to bond and connect with talents and students across the globe with diverse backgrounds.</li><br>
+                        </ul>
+</h4>
+                <a href="https://mp.weixin.qq.com/s?__biz=Mzk3NTgxNjUwNw==&mid=2247483746&idx=1&sn=50cdf5694bb8a003919163f78c7f98fd&scene=21#wechat_redirect" target="_blank"><h4>>>>Learn More</h4></a><hr style="width:0%">
+                <a href="/site/team/eng=on"><h4>>>>Meet Our Team</h4></a><hr style="width:0%">
                 </ol>
         </div>
-            <div class="footer">
-        <div class="info-item">
-            <div class="info-icon">📍</div>
-            <strong>Address</strong>
-            <p>No. 88 Kun-Cheng-Hu-Xi Road Changshu, Suzhou, Jiangsu Province, China</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">📞</div>
-            <strong>Phone</strong>
-            <p>+86 18118435242</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">✉️</div>
-            <strong>Email</strong>
-            <p>hannah.061203@qq.com</p >
-        </div>
+{% endblock %}
 
+{% block lang %}
         <div class="info-item">
-            <div class="info-icon">🌍</div>
-            <strong>Languages</strong>
-            <p><a href="/site/home/eng=off" style="text-decoration:none">🇨🇳</a> <a href="/site/home/eng=on" style="text-decoration:none">🇺🇸</a></p>
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/home/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/home/eng=on" style="color:white; text-decoration:none">English</a></h5>
         </div>
-    </div>
 {% endblock %}

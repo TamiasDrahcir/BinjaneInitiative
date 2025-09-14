@@ -1,0 +1,22 @@
+{%extends 'Site/baseeng.html'%}
+{% load static %}
+
+{% block content %}
+     <div class="main-img">
+                <img src="{% static 'about.jpg' %}" width="100%">     
+        </div>
+        <div class="content" style="transform: translateY(-100px);">
+                <h1>About Us</h1><hr style="width:40%"><br>
+                <p>Binjane is a community composed of a group of people with action , idealism and social influence who gather together to make sex education more popular and empower more people in need physically and mentally through education .</p><br>
+                <p>Whether you’re seeking support, volunteering your skills, or partnering with us, Binjane is where resilience meets action. Together, we nurture orchids of change—one student, one classroom, one community at a time.</p> 
+        </div>
+
+        
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/about/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/about/eng=on" style="color:white; text-decoration:none">English</a></h5>
+        </div>
+{% endblock %}

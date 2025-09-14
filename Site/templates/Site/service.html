@@ -2,36 +2,43 @@
 {% load static %}
 
 {% block content %}
-    <body>
-        <h1 class="heading">Our Services</h1>
-        <img class="main-img" src="{% static 'home-1.png' %}" style="position:absolute; top:7.5%">
-        <p class="content" style="top:65%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat duis ultricies.</p>
-        <p class="content" style="top:75%">Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Ultricies mi eget mauris pharetra et ultrices neque ornare aenean.</p>
-        <p class="content" style="top:85%; padding-bottom:20%">Sed nisi lacus sed viverra tellus in hac habitasse platea. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Elit at imperdiet dui accumsan sit amet nulla facilisi morbi. In mollis nunc sed id semper risus in hendrerit gravida. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-    </body>
-        <div class="footer">
-        <div class="info-item">
-            <div class="info-icon">📍</div>
-            <strong>Address</strong>
-            <p>No. 88 Kun-Cheng-Hu-Xi Road Changshu, Suzhou, Jiangsu Province, China</p >
+     <div class="main-img">
+                <img src="{% static 'service-alt.jpg' %}" width="100%">     
         </div>
-        
-        <div class="info-item">
-            <div class="info-icon">📞</div>
-            <strong>Phone</strong>
-            <p>+86 18118435242</p >
-        </div>
-        
-        <div class="info-item">
-            <div class="info-icon">✉️</div>
-            <strong>Email</strong>
-            <p>hannah.061203@qq.com</p >
-        </div>
+        <div class="content">
+            <h1>服务</h1><hr style="width:40%">
+            <p>这是服务的中文页面</p>
+            <h1>想要加入志愿者行列吗？</h1>
+            <p>请留下您的联系方式：</p>
+            <form style='position:relative' action="/site/submit_service/eng=off" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="label" for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="email">电子邮件</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="phone">电话号码（选填）</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
 
-        <div class="info-item">
-            <div class="info-icon">🌍</div>
-            <strong>Languages</strong>
-            <p><a href="/site/home/eng=off" style="text-decoration:none">🇨🇳</a> <a href="/site/home/eng=on" style="text-decoration:none">🇺🇸</a></p>
+                <div class="form-group" style="flex-direction:column">
+                    <label class="label" for="interest">请在200字以内简要描述您的兴趣（选填）：</label><br>
+                    <textarea id="interest" name="interest" rows="100" cols='50' maxlength="200" wrap="soft" style="width: 400px; height: 200px;"></textarea>
+                </div>
+                <button type="submit" class="submit-btn" style="margin-bottom:40%; width:200px;font-size:25px">提交</button>
+            </form>
         </div>
-    </div>
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/service/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/service/eng=on" style="color:white; text-decoration:none">English</a></h5>
+        </div>
 {% endblock %}

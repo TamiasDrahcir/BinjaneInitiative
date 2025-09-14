@@ -1,0 +1,74 @@
+{%extends 'Site/base.html'%}
+{% load static %}
+
+{% block content %}
+    <div class="main-img">
+        <img src="{{ gallery.image.url }}" width="100%">
+    </div>
+    <div class="content">
+        <h1>{{ gallery.chinese_name }}</h1>
+        <hr style="width:40%">
+        <p>{{ gallery.chinese_description }}</p>
+        <br><br>
+        <h1>往期精彩</h1>
+        <hr style="width:40%">
+        <div class="preview" id="human_kaleidoscope">
+            <div class="gallery">
+                {% for item in history %}
+                    <div class="gallery-item">
+                        <a href="{{ item.url }}" target="_blank">
+                            <img src="{{ item.image.url }}">
+                            <h6>{{ item.chinese_title }}</h6>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <h1>想要上传您的佳作和独特想法么?</h1>
+        <hr style="width:40%">
+        <p>请在下面留下您的联系信息：</p>
+
+        <form action="/site/submit_gallery/eng=off" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="label" for="name">姓名</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="label" for="email">电子邮件</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="label" for="phone">电话号码（选填）</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group" style="flex-direction: column;">
+                <label class="label" for="interest">请告诉我们您感兴趣的领域（请一次选择一个）：</label><br>
+                <label class="label" style="transform:translatex(5vw)">
+                    <input type="checkbox" name="interest" value="采访"> 采访
+                </label><br>
+                
+                <label class="label" style="transform:translatex(5vw)">
+                    <input type="checkbox" name="interest" value="写作"> 写作
+                </label><br>
+
+                <label class="label" style="transform:translatex(5vw)">
+                    <input type="checkbox" name="interest" value="艺术作品"> 艺术作品
+                </label>
+                
+        
+            </div>
+            <button type="submit" class="submit-btn" style="width:200px;font-size:25px">提交</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/gallery/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/gallery/eng=on" style="color:white; text-decoration:none">English</a></h5>
+        </div>
+{% endblock %}

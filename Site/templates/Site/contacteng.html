@@ -1,0 +1,49 @@
+{%extends 'Site/baseeng.html'%}
+{% load static %}
+
+{% block content %}
+     <div class="main-img">
+                <img src="{% static 'contact.jpg' %}" width="500px">     
+        </div>
+        <div class="content">
+            <h1 style="position: absolute; top:-50px; transform:translateY(90px) translateX(-30px);">Contact Us</h1><hr style="width:40%; transform:translateY(60px)">
+                <p style="position: absolute; transform:translateY(60px)">We'd be glad to hear from you! Please fill out the following form:</p>
+        </div>
+
+    <form class="content" action="/site/submit_contact/eng=on" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="label" for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="label" for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="label" for="phone">Phone Number (Optional)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label class="label" for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="label" for="message">Message</label> <br>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn" style="margin-bottom:40%; width:200px;font-size:25px">Submit</button>
+        </form>
+{% endblock %}
+
+{% block lang %}
+        <div class="info-item">
+            <h4><div class="info-icon">🌍</div></h4>
+            <h5><a href="/site/contact/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/contact/eng=off" style="color:white; text-decoration:none">English</a></h5>
+        </div>
+{% endblock %}
