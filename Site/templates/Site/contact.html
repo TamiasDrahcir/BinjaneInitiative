@@ -3,6 +3,7 @@
 
 {% block content %}
      <div class="main-img">
+<<<<<<< HEAD
                 <img src="{% static 'contactus.jpg' %}" width="100%">     
     </div>
     <div class="content">
@@ -37,6 +38,42 @@
             </div>
             
             <button type="submit" class="submit-btn" style="margin-bottom:40%; width:200px;font-size:25px">发送</button>
+=======
+                <img src="{% static 'contact.jpg' %}" width="500px">     
+    </div>
+        <div class="content" style="background-color: #d6ecf0;">
+            <h1 style="position: absolute; top:-50px; background-color: #d6ecf0; padding-left:60px; padding-top:30px; transform: translateX(-60px) translateY(0px);">联系我们</h1><hr style="width:40%;">
+                <p style="position: absolute">我们很乐意听取你的意见！请填入以下表格：</p>
+            </div>
+
+            <form class="content" action="/submit-contact/" method="post" style="position:absolute; top:960px;">
+                <div class="form-group">
+                    <label class="label" for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="email">邮件</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="phone">电话号码（可选）</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="subject">标题</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="message">信息</label> <br>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" style="margin-bottom:40%; width:200px;font-size:25px">发送</button>
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
         </form>
     </div>
 {% endblock %}

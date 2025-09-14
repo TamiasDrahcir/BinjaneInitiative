@@ -12,7 +12,11 @@
         body {
             /* Add padding-top to prevent content from being hidden under fixed header */
             padding-top: 100px;
+<<<<<<< HEAD
             background-color: black;
+=======
+            background-color: #5CB5C7;
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
             height: 100vh;
             margin: 0;
             display: flex;
@@ -23,6 +27,7 @@
         }
 
         .main-img {
+<<<<<<< HEAD
             position: relative;
             display: flex;
             width: 100%;
@@ -38,6 +43,23 @@
             );
             opacity: 1;
         }
+=======
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 300px;
+    padding-bottom: 100px;
+    /* Add these new properties */
+    mask-image: linear-gradient(
+        rgba(92,181,199,1) 70%,
+        rgba(92,181,199,0) 85%
+    );
+    opacity: 1;
+}
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
 
 
         .label{
@@ -63,6 +85,7 @@
             display:grid;
             justify-items: center;
             grid-template-columns: repeat(4,1fr);
+<<<<<<< HEAD
             margin: 0px;
             font-family:Segoe UI;
             font-size: 12px;
@@ -90,6 +113,26 @@
             width:100%;
             text-align:center;
             color:white;
+=======
+            z-index:2;   
+            margin: 0px;
+            font-family:Segoe UI;
+            font-size: 12px;
+            background-color: black;
+            position:fixed;
+            bottom:0%;
+            width:100%;
+            height: 12.5%;
+            z-index:300; 
+        }
+
+        .info-item{
+            margin:5px;
+            padding:5px;
+            width:90%;
+            text-align:center;
+            color:white
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
         }
 
         
@@ -99,7 +142,11 @@
             top: 0px;
             left: 0px;
             width: 100%;
+<<<<<<< HEAD
             height: 150px;
+=======
+            height: 400px;
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
             display: flex;          /* Add flexbox */
             justify-content: center; /* Center horizontally */
             align-items: center;    /* Center vertically */
@@ -147,14 +194,22 @@
         .sidebar {
             position: absolute;  /* Changed from absolute to fixed */
             background-color: white;
+<<<<<<< HEAD
             top:100px;
             right: -250px;
             width: 150px;
             height: 400px;
+=======
+            top: -600px;
+            right: -30px;
+            width: 200px;
+            height: 600px;
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
             opacity: 0;
             transition: all 1s ease-in-out;  /* Transition all properties */
             padding: 20px;
             box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+<<<<<<< HEAD
             z-index: 9000;  /* Increased z-index */
         }
 
@@ -162,26 +217,54 @@
             right:-30px;
             opacity: 1;
             z-index: -20000;
+=======
+            z-index: -1000;  /* Increased z-index */
+        }
+
+        .sidebar.active {
+            top:0px;
+            opacity: 1;
+            z-index:-1000;
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
         }
 
         .menu-icon {
             position: absolute;  /* Changed to fixed positioning */
+<<<<<<< HEAD
             color: white;
             font-size: 25px;
             top: 50px;  /* Adjusted position */
             right: 30px;
             cursor: pointer;
             z-index: 10000;
+=======
+            color: black;
+            font-size: 50px;
+            top: 400px;  /* Adjusted position */
+            right: 30px;
+            cursor: pointer;
+            z-index: 1000;
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
         }
 
         .sidebar a {
             display: block;
+<<<<<<< HEAD
             width:100px;
             color: black;
             font-family:'Segoe UI';
             font-size:12px;
             text-decoration: none;
             border-radius: 5px;
+=======
+            width:150px;
+            color: black;
+            font-family:'Segoe UI';
+            font-size:20px;
+            text-decoration: none;
+            border-radius: 5px;
+            padding:10px;
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
             text-align: center;
             transition:0.5s;
         }
@@ -193,7 +276,11 @@
         .content{
             background-color: #d6ecf0;
             padding:60px;
+<<<<<<< HEAD
             width: 70%;
+=======
+            width: 800px;
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
             color: black;
             position:relative;
             justify-content: center;
@@ -212,7 +299,11 @@
         }
 
         .content p{
+<<<<<<< HEAD
             font-size:20px;
+=======
+            font-size:25px;
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
             line-height: 200%;
         }
 
@@ -239,6 +330,7 @@
             color:white;
         }
 
+<<<<<<< HEAD
         .team {
             display: grid;
             grid-template-columns: 2 2 2;
@@ -267,6 +359,8 @@
             display:flexbox;
         }
 
+=======
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
     </style>
 </head>
 <body>
@@ -281,7 +375,11 @@
     <div class="footer">
         <div class="info-item">
             <h4><div class="info-icon">📍</div></h4>
+<<<<<<< HEAD
             <h6>Shanghai Rd, Taizhou City, Jiangsu Province, China</h6 >
+=======
+            <h6>中国江苏省常熟市昆承湖西路88号</h6 >
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
         </div>
         
         <div class="info-item">
@@ -291,7 +389,11 @@
         
         <div class="info-item">
             <h4><div class="info-icon">✉️</div></h4>
+<<<<<<< HEAD
             <h6>kexin.dai@emory.edu</h6>
+=======
+            <h6>hannah.061203@qq.com</h6>
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
         </div>
 
         {% block lang %}
@@ -306,8 +408,11 @@
             <hr style="border-top:1px solid black">
             <a href="/site/about/eng=on">Meet Our Team</a>
             <hr style="border-top:1px solid black">
+<<<<<<< HEAD
             <a href="/site/gallery/eng=on">Gallery</a>
             <hr style="border-top:1px solid black">
+=======
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
             <a href="/site/service/eng=on">Service</a>
             <hr style="border-top:1px solid black">
             <a href="/site/contact/eng=on">Contact Us</a>

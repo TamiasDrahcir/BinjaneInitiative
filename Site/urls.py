@@ -8,6 +8,7 @@ urlpatterns = [
     path('about/eng=on', views.abouteng,name="abouteng"),
     path('service/eng=off',views.service,name="service"),
     path('service/eng=on', views.serviceeng,name="serviceeng"),
+<<<<<<< HEAD
     path('submit_service/eng=off',views.servicesub,name="servicesub"),
     path('submit_service/eng=on',views.servicesubeng,name="servicesubeng"),
     path('contact/eng=off',views.contact,name="contact"),
@@ -24,4 +25,10 @@ urlpatterns = [
     path('submit_tajian/eng=off',views.tajiansub,name="tajiansub"),
     path('tajian/eng=on',views.tajian,name="tajiansub"),
     path('submit_tajian/eng=on',views.tajiansubeng,name="tajiansubeng"),
+=======
+    path('contact/eng=off',views.contact,name="contact"),
+    path('contact/eng=on',views.contacteng,name="contacteng"),
+    path('team/eng=off',views.team,name="team"),
+    path('team/eng=on',views.teameng,name="teameng"),
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
 ]

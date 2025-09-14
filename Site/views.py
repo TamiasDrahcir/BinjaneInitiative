@@ -23,6 +23,7 @@ def service(request):
 def serviceeng(request):
     return render(request,'Site/serviceeng.html')
 
+<<<<<<< HEAD
 def servicesub(request):
     context = {}
     if request.method == "POST":
@@ -111,12 +112,15 @@ Interest: {interest}
 
     return render(request,'Site/servicesubeng.html',context)
 
+=======
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
 def contact(request):
     return render(request,'Site/contact.html')
 
 def contacteng(request):
     return render(request,'Site/contacteng.html')
 
+<<<<<<< HEAD
 def contactsub(request):
     context = {}
     if request.method == "POST":
@@ -416,3 +420,10 @@ Interest: {interest}
         })
 
     return render(request, 'Site/tajiansub.html', context)
+=======
+def team(request):
+    return render(request,'Site/team.html')
+
+def teameng(request):
+    return render(request,'Site/teameng.html')
+>>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
