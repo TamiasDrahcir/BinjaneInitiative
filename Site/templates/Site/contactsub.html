@@ -3,25 +3,13 @@
 
 {% block content %}
      <div class="main-img">
-                <img src="{% static 'contact.jpg' %}" width="500px">     
+                <img src="{% static 'contactus.jpg' %}" width="100%">     
     </div>
-        <div class="content" style="background-color: #d6ecf0;">
-            <h1 style="position: absolute; top:-50px; background-color: #d6ecf0; padding-left:60px; padding-top:30px; transform: translateX(-60px) translateY(0px);">联系我们</h1><hr style="width:40%;">
-                <p style="position: absolute">我们很乐意听取你的意见！请填入以下表格：</p>
-            </div>
+    <div class="content">
+        <h1>联系我们</h1><hr style="width:40%;">
+        <p style="position: relative">我们很乐意听取你的意见！请填入以下表格：</p>
 
-            <div style="position:absolute; top:960px; transform:translateY(60px)">
-            <p>感谢您与我们联系！我们已收到您的消息，并将尽快回复您。</p>
-            {% if error %}
-                <p style="color: red;">错误：{{ error }}</p>
-            {% endif %}
-            {% if success %}
-                <p style="color: green;">邮件发送成功！</p>
-            {% endif %}
-            <a href="/site/contact/eng=on">
-                <button type="button" class="submit-btn" style="margin-bottom:40%; width:200px;font-size:25px">Submit Another</button>
-            </a>
-        </div>
+        <h6 id="thank_you">感谢您与我们联系！我们已收到您的消息，并将尽快回复您。</h6>
     </div>
 {% endblock %}
 

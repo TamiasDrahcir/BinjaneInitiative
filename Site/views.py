@@ -243,6 +243,14 @@ def kaleidoscopeeng(request):
     return render(request,'Site/kaleidoscopeeng.html')
 
 def kaleidoscopesub(request):
+
+    gallery = category.objects.filter(english_name='Human Kaleidoscope').first()
+    dictionary = {
+        'gallery': gallery,
+        'name': gallery.chinese_name,
+        'description': gallery.chinese_description,
+        'history': gallery.gallery_set.filter(category_id=gallery.id).all(),
+    }
     context = {}
     if request.method == "POST":
         
@@ -284,7 +292,7 @@ def kaleidoscopesub(request):
             'interest': interest,
         })
 
-    return render(request, 'Site/kaleidoscopesub.html', context)
+    return render(request, 'Site/kaleidoscopesub.html', dictionary)
 
 def kaleidoscopesubeng(request):
     context = {}
@@ -333,7 +341,13 @@ def tajianeng(request):
     return render(request,'Site/tajianeng.html')
 
 def tajiansub(request):
-    context = {}
+    gallery = category.objects.filter(english_name='Tajian').first()
+    dictionary = {
+        'gallery': gallery,
+        'name': gallery.chinese_name,
+        'description': gallery.chinese_description,
+        'history': gallery.gallery_set.filter(category_id=gallery.id).all(),
+    }
     if request.method == "POST":
         
         # Get all form fields
@@ -361,20 +375,11 @@ def tajiansub(request):
                 fail_silently=False,
             )
             print("Email sent successfully")  # Debug print
-            context['success'] = True
         except Exception as e:
             print(f"Error sending email: {str(e)}")  # Debug print
-            context['error'] = str(e)
 
-        # Store all form data in context
-        context.update({
-            'name': name,
-            'email': email,
-            'phone': phone,
-            'interest': interest,
-        })
 
-    return render(request, 'Site/tajiansub.html', context)
+    return render(request, 'Site/tajiansub.html', dictionary)
 
 def tajiansubeng(request):
     context = {}

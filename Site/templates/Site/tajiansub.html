@@ -2,12 +2,39 @@
 {% load static %}
 
 {% block content %}
-     <h1>感谢您与我们联系！我们已收到您的消息，并将尽快回复您。</h1>
+    <div class="main-img">
+        <img src="{{ gallery.image.url }}" width="100%">
+    </div>
+    <div class="content">
+        <h1>{{ gallery.chinese_name }}</h1>
+        <hr style="width:40%">
+        <p>{{ gallery.chinese_description }}</p>
+        <br><br>
+        <h1>往期精彩</h1>
+        <hr style="width:40%">
+        <div class="preview" id="human_kaleidoscope">
+            <div class="gallery">
+                {% for item in history %}
+                    <div class="gallery-item">
+                        <a href="{{ item.url }}" target="_blank">
+                            <img src="{{ item.image.url }}">
+                            <h6>{{ item.chinese_title }}</h6>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <h1>想要上传您的佳作和独特想法么?</h1>
+        <hr style="width:40%">
+        <p>请在下面留下您的联系信息：</p>
+
+        <h6 id="thank_you">感谢您与我们联系！我们已收到您的消息，并将尽快回复您。</h6>
+    </div>
 {% endblock %}
 
 {% block lang %}
         <div class="info-item">
             <h4><div class="info-icon">🌍</div></h4>
-            <h5><a href="/site/gallery/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/gallery/eng=on" style="color:white; text-decoration:none">English</a></h5>
+            <h5><a href="/site/tajian/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/tajian/eng=on" style="color:white; text-decoration:none">English</a></h5>
         </div>
 {% endblock %}

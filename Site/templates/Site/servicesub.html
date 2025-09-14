@@ -5,19 +5,18 @@
      <div class="main-img">
                 <img src="{% static 'service-alt.jpg' %}" width="100%">     
         </div>
-        <div class="content" style="transform: translateY(-100px);">
+        <div class="content">
             <h1>服务</h1><hr style="width:40%">
-                <p>更多精彩内容敬请期待！</p>
-                <div class="content">
-            <h1 style="position: absolute; top:-50px; transform:translateY(90px) translateX(-30px);">想要加入志愿者行列吗？</h1><hr style="width:40%; transform:translateY(60px)">
-                <p style="position: absolute; transform:translateY(60px)">感谢您的支持！我们会尽快与您联系。</p>
+            <p>这是服务的中文页面</p>
+            <h1>想要加入志愿者行列吗？</h1>
+            <p>请留下您的联系方式：</p>
+            <h6 id="thank_you">感谢您与我们联系！我们已收到您的消息，并将尽快回复您。</h6>
         </div>
-    </div>
 {% endblock %}
 
 {% block lang %}
         <div class="info-item">
             <h4><div class="info-icon">🌍</div></h4>
-            <h5><a href="/site/submit_service/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/service/eng=on" style="color:white; text-decoration:none">English</a></h5>
+            <h5><a href="/site/service/eng=off" style="color:white; text-decoration:none">中文</a> | <a href="/site/service/eng=on" style="color:white; text-decoration:none">English</a></h5>
         </div>
 {% endblock %}

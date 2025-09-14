@@ -147,7 +147,7 @@
             background-color:black;
             position:fixed;
             bottom:0%;
-            width:100%;
+            width:100vw;
             height: 10vh;
             z-index:300; 
         }
@@ -642,11 +642,8 @@
     <div class="footer">
         <div class="info-item">
             <h4><div class="info-icon">📍</div></h4>
-<<<<<<< HEAD
+        
             <h6>中国江苏省泰州市上海路</h6 >
-=======
-            <h6>中国江苏省常熟市昆承湖西路88号</h6 >
->>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
         </div>
         
         <div class="info-item">
@@ -656,23 +653,17 @@
         
         <div class="info-item">
             <h4><div class="info-icon">✉️</div></h4>
-<<<<<<< HEAD
             <h6>kexin.dai@emory.edu</h6>
         </div>
 
         <div class="info-item" onclick="toggleQRCode()">
-            <h4><div class="info-icon"><img src="{% static 'wechat.jpg' %}" alt="WeChat Icon"></div></h4>
+            <h4><div class="info-icon" style="cursor: pointer;"><img src="{% static 'wechat.jpg' %}" alt="WeChat Icon"></div></h4>
             <h6>秉蕳 Binjane</h6>
             <div class="qr-code">
                 <img src="{% static 'qrcode.jpg' %}" width="100px">
             </div>
         </div>
 
-=======
-            <h6>hannah.061203@qq.com</h6>
-        </div>
-
->>>>>>> 827c6b577772f45dc6cc1726d84ba9c58cdcac1f
         {% block lang %}
         {% endblock %}
     </div>
